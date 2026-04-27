@@ -1,6 +1,13 @@
+import Link from "next/link";
 import { CareCoreLogoEditorial, editorialColors } from "../Brand";
 
-const navItems = ["Platform", "Outcomes", "Pilot", "Compliance", "About"];
+const navItems: ReadonlyArray<{ label: string; href: string }> = [
+  { label: "Platform", href: "/" },
+  { label: "Outcomes", href: "/" },
+  { label: "Pilot", href: "/pilot" },
+  { label: "Compliance", href: "/" },
+  { label: "About", href: "/" },
+];
 const utilityLinks = ["Sign In", "Operator Login", "Contact"];
 
 export const Masthead = () => (
@@ -62,9 +69,9 @@ export const Masthead = () => (
       </div>
       <nav style={{ display: "flex", flex: 1, gap: 4 }}>
         {navItems.map((item, i) => (
-          <a
-            key={item}
-            href="#"
+          <Link
+            key={item.label}
+            href={item.href}
             style={{
               fontFamily: "var(--font-ui)",
               fontSize: 12,
@@ -77,13 +84,15 @@ export const Masthead = () => (
               display: "flex",
               alignItems: "center",
               borderBottom: i === 0 ? `2px solid ${editorialColors.gold}` : "2px solid transparent",
+              textDecoration: "none",
             }}
           >
-            {item}
-          </a>
+            {item.label}
+          </Link>
         ))}
       </nav>
-      <button
+      <Link
+        href="/pilot/request"
         style={{
           fontFamily: "var(--font-ui)",
           fontSize: 12,
@@ -96,10 +105,13 @@ export const Masthead = () => (
           padding: "0 22px",
           height: 40,
           borderRadius: 2,
+          display: "inline-flex",
+          alignItems: "center",
+          textDecoration: "none",
         }}
       >
         Request a Pilot →
-      </button>
+      </Link>
     </div>
   </header>
 );

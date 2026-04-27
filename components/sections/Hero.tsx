@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Eyebrow, editorialColors } from "../Brand";
 
 export const Hero = () => (
@@ -85,7 +86,8 @@ export const Hero = () => (
           </p>
 
           <div style={{ display: "flex", gap: 14, marginTop: 36 }}>
-            <button
+            <Link
+              href="/pilot/request"
               style={{
                 fontFamily: "var(--font-ui)",
                 fontSize: 13,
@@ -98,10 +100,13 @@ export const Hero = () => (
                 padding: "0 28px",
                 height: 52,
                 borderRadius: 2,
+                display: "inline-flex",
+                alignItems: "center",
+                textDecoration: "none",
               }}
             >
               Request a 30-Day Pilot →
-            </button>
+            </Link>
             <button
               style={{
                 fontFamily: "var(--font-ui)",
