@@ -9,7 +9,11 @@ const navItems: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Compliance", href: "/" },
   { label: "About", href: "/" },
 ];
-const utilityLinks = ["Sign In", "Operator Login", "Contact"];
+const utilityLinks: ReadonlyArray<{ label: string; href: string }> = [
+  { label: "Insights", href: "/blog" },
+  { label: "RSS", href: "/feed.xml" },
+  { label: "Contact", href: "mailto:regan@chorlog.com" },
+];
 
 export const Masthead = () => (
   <header style={{ background: editorialColors.navy }}>
@@ -37,9 +41,9 @@ export const Masthead = () => (
       </span>
       <div style={{ display: "flex", gap: 24 }}>
         {utilityLinks.map((l) => (
-          <a
-            key={l}
-            href="#"
+          <Link
+            key={l.label}
+            href={l.href}
             style={{
               fontFamily: "var(--font-ui)",
               fontSize: 10,
@@ -48,10 +52,11 @@ export const Masthead = () => (
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.5)",
               cursor: "pointer",
+              textDecoration: "none",
             }}
           >
-            {l}
-          </a>
+            {l.label}
+          </Link>
         ))}
       </div>
     </div>
