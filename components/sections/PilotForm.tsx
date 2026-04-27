@@ -41,10 +41,11 @@ export const PilotForm = () => {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (status === "submitting") return;
+    const form = e.currentTarget;
     setStatus("submitting");
     setErrorMsg("");
 
-    const data = new FormData(e.currentTarget);
+    const data = new FormData(form);
     const payload = {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
@@ -67,8 +68,8 @@ export const PilotForm = () => {
         setStatus("error");
         return;
       }
+      form.reset();
       setStatus("success");
-      e.currentTarget.reset();
     } catch {
       setErrorMsg("Network error. Please try again.");
       setStatus("error");
