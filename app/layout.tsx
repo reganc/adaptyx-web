@@ -50,6 +50,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
   category: "Healthcare Technology",
 };
 
