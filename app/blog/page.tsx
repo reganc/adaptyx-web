@@ -60,12 +60,49 @@ export default function BlogIndex() {
               lineHeight: 1.6,
               color: "rgba(255,255,255,0.78)",
               margin: 0,
+              marginBottom: 28,
               maxWidth: 640,
             }}
           >
             Operational analysis from skilled-nursing pilots — what breaks, what
             fixes it, and what the numbers actually look like.
           </p>
+          <a
+            href="/feed.xml"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              fontFamily: "var(--font-ui)",
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "#fff",
+              border: "1px solid rgba(255,255,255,0.35)",
+              padding: "0 22px",
+              height: 42,
+              borderRadius: 2,
+              textDecoration: "none",
+            }}
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <path
+                d="M4 4a16 16 0 0116 16M4 11a9 9 0 019 9M6 18a2 2 0 100-4 2 2 0 000 4z"
+                stroke={editorialColors.gold}
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Subscribe via RSS
+          </a>
         </div>
       </section>
 

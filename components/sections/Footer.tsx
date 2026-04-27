@@ -1,9 +1,36 @@
+import Link from "next/link";
 import { CareCoreLogoEditorial, Eyebrow, editorialColors } from "../Brand";
 
-const columns: ReadonlyArray<readonly [string, ReadonlyArray<string>]> = [
-  ["Platform", ["How It Works", "Compliance", "Integrations", "Security"]],
-  ["For You", ["Administrators", "Directors of Nursing", "IT & Operations", "Multi-Facility"]],
-  ["Company", ["About Adaptyx", "Pilot Program", "Contact", "Press Kit"]],
+type Col = readonly [string, ReadonlyArray<{ label: string; href: string }>];
+
+const columns: ReadonlyArray<Col> = [
+  [
+    "Platform",
+    [
+      { label: "Overview", href: "/platform" },
+      { label: "Clinical Care", href: "/platform/clinical-care" },
+      { label: "Quality & QAPI", href: "/platform/quality-qapi" },
+      { label: "Compliance & Rights", href: "/platform/compliance" },
+      { label: "Reporting & AI", href: "/platform/reporting-ai" },
+    ],
+  ],
+  [
+    "For You",
+    [
+      { label: "Pilot Program", href: "/pilot" },
+      { label: "Request a Pilot", href: "/pilot/request" },
+      { label: "Workforce", href: "/platform/workforce" },
+      { label: "Family & Communication", href: "/platform/family-communication" },
+    ],
+  ],
+  [
+    "Company",
+    [
+      { label: "Insights", href: "/blog" },
+      { label: "RSS Feed", href: "/feed.xml" },
+      { label: "Contact", href: "mailto:regan@chorlog.com" },
+    ],
+  ],
 ];
 
 export const Footer = () => (
@@ -25,7 +52,13 @@ export const Footer = () => (
         }}
       >
         <div>
-          <CareCoreLogoEditorial height={40} onDark />
+          <Link
+            href="/"
+            aria-label="CareCore home"
+            style={{ display: "inline-flex", alignItems: "center" }}
+          >
+            <CareCoreLogoEditorial height={40} onDark />
+          </Link>
           <p
             style={{
               fontFamily: "var(--font-body)",
@@ -48,19 +81,20 @@ export const Footer = () => (
               {title}
             </Eyebrow>
             {links.map((l) => (
-              <a
-                key={l}
-                href="#"
+              <Link
+                key={l.label}
+                href={l.href}
                 style={{
                   display: "block",
                   fontFamily: "var(--font-body)",
                   fontSize: 14,
                   color: "rgba(255,255,255,0.65)",
                   padding: "6px 0",
+                  textDecoration: "none",
                 }}
               >
-                {l}
-              </a>
+                {l.label}
+              </Link>
             ))}
           </div>
         ))}
