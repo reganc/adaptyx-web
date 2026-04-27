@@ -5,6 +5,7 @@ const navItems: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Platform", href: "/" },
   { label: "Outcomes", href: "/" },
   { label: "Pilot", href: "/pilot" },
+  { label: "Insights", href: "/blog" },
   { label: "Compliance", href: "/" },
   { label: "About", href: "/" },
 ];

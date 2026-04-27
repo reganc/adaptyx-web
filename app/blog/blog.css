@@ -1,0 +1,72 @@
+.prose {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  color: #111;
+  max-width: 720px;
+}
+.prose > * + * {
+  margin-top: 1.1em;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: #0c1b33;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #0c1b33;
+  margin-top: 1.6em;
+  margin-bottom: 0.4em;
+}
+.prose p {
+  margin: 0;
+}
+.prose strong {
+  color: #0c1b33;
+}
+.prose a {
+  color: #0c1b33;
+  text-decoration: underline;
+  text-decoration-color: #c8922a;
+  text-underline-offset: 3px;
+}
+.prose a:hover {
+  color: #c8922a;
+}
+.prose ol,
+.prose ul {
+  padding-left: 1.4em;
+}
+.prose li {
+  margin-bottom: 0.4em;
+}
+.prose li > p {
+  display: inline;
+}
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.92em;
+  background: #f5f3ef;
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+.prose blockquote {
+  border-left: 3px solid #c8922a;
+  padding: 4px 0 4px 20px;
+  color: #444;
+  font-style: italic;
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(12, 27, 51, 0.15);
+  margin: 3em 0;
+}
