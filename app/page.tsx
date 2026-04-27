@@ -6,6 +6,7 @@ import { Ticker } from "@/components/sections/Ticker";
 import { Brief } from "@/components/sections/Brief";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ProductMock } from "@/components/sections/ProductMock";
+import { Depth } from "@/components/sections/Depth";
 import { AudienceProof } from "@/components/sections/AudienceProof";
 import { Pilot } from "@/components/sections/Pilot";
 import { Footer } from "@/components/sections/Footer";
@@ -35,6 +36,7 @@ export default function Page() {
       <Brief />
       <HowItWorks />
       <ProductMock />
+      <Depth />
       <AudienceProof />
       <Pilot />
       <Footer />

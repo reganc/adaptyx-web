@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CareCoreLogoEditorial, editorialColors } from "../Brand";
 
 const navItems: ReadonlyArray<{ label: string; href: string }> = [
-  { label: "Platform", href: "/" },
+  { label: "Platform", href: "/platform" },
   { label: "Outcomes", href: "/" },
   { label: "Pilot", href: "/pilot" },
   { label: "Insights", href: "/blog" },
