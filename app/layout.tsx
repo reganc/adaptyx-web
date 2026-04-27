@@ -25,11 +25,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-    types: {
-      "application/rss+xml": [
-        { url: "/feed.xml", title: `${siteConfig.name} — Insights` },
-      ],
-    },
   },
   openGraph: {
     type: "website",
@@ -75,6 +70,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${siteConfig.name} — Insights`}
+          href="/feed.xml"
+        />
         {children}
         <OrganizationJsonLd />
         <WebSiteJsonLd />
