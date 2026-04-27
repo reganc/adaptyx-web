@@ -65,9 +65,13 @@ export const Masthead = () => (
         borderBottom: "1px solid rgba(255,255,255,0.07)",
       }}
     >
-      <div style={{ marginRight: 48 }}>
+      <Link
+        href="/"
+        aria-label="CareCore home"
+        style={{ marginRight: 48, display: "inline-flex", alignItems: "center" }}
+      >
         <CareCoreLogoEditorial height={42} onDark />
-      </div>
+      </Link>
       <nav style={{ display: "flex", flex: 1, gap: 4 }}>
         {navItems.map((item, i) => (
           <Link
