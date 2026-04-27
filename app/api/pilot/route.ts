@@ -14,7 +14,7 @@ type PilotRequest = {
   message?: string;
 };
 
-const TO = "regan@chorlog.com";
+const TO = process.env.PILOT_TO ?? "regan@chorlog.com";
 const FROM = process.env.PILOT_FROM ?? "Adaptyx Pilot <onboarding@resend.dev>";
 
 const escape = (s: string) =>
