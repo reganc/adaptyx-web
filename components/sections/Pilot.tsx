@@ -1,4 +1,5 @@
 import { Eyebrow, editorialColors } from "../Brand";
+import { PilotForm } from "./PilotForm";
 
 const terms: ReadonlyArray<readonly [string, string]> = [
   ["Scope", "1 unit, ~5–15 staff, ~30 beds"],
@@ -65,34 +66,7 @@ export const Pilot = () => (
             one. We handle onboarding so your staff isn&apos;t burdened. If we don&apos;t move the
             numbers, you walk away. If we do, we discuss what a rollout looks like.
           </p>
-          <button
-            style={{
-              fontFamily: "var(--font-ui)",
-              fontSize: 14,
-              fontWeight: 700,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              background: editorialColors.gold,
-              color: "#fff",
-              border: "none",
-              padding: "0 36px",
-              height: 60,
-              borderRadius: 2,
-            }}
-          >
-            Request Your Pilot →
-          </button>
-          <div
-            style={{
-              fontFamily: "var(--font-body)",
-              fontStyle: "italic",
-              fontSize: 14,
-              color: "rgba(255,255,255,0.55)",
-              marginTop: 16,
-            }}
-          >
-            Average response time from our team: under one business day.
-          </div>
+          <PilotForm />
         </div>
 
         <div
