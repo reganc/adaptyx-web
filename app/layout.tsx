@@ -1,10 +1,62 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { siteConfig } from "@/lib/site";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CareCore by Adaptyx — The operating layer for skilled nursing",
-  description:
-    "CareCore is the AI operating layer for skilled nursing facilities. It sits alongside your existing systems and quietly keeps documentation, tasks, and compliance from slipping — shift after shift.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    template: `%s — ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.legalName }],
+  keywords: [
+    "skilled nursing software",
+    "SNF documentation",
+    "AI for skilled nursing",
+    "nursing home operations",
+    "long-term care AI",
+    "EHR augmentation",
+    "compliance automation",
+    "CareCore",
+    "Adaptyx",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    url: siteConfig.url,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "Healthcare Technology",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0C1B33",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -14,7 +66,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+      </body>
     </html>
   );
 }

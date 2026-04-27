@@ -1,13 +1,30 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { editorialColors, Eyebrow } from "@/components/Brand";
 import { Masthead } from "@/components/sections/Masthead";
 import { Footer } from "@/components/sections/Footer";
 import { pilotTerms } from "@/components/sections/pilotTerms";
+import {
+  BreadcrumbJsonLd,
+  OfferPilotJsonLd,
+  ServiceJsonLd,
+} from "@/components/seo/JsonLd";
 
-export const metadata = {
-  title: "30-Day Pilot Program — CareCore by Adaptyx",
-  description:
-    "How the CareCore pilot works: scope, duration, success metrics, and what your facility commits to.",
+const title = "30-Day Pilot Program";
+const description =
+  "How the CareCore 30-day operational pilot works: scope, duration, success metrics, what we ask of you, and what we provide. No cost, no commitment.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: "/pilot" },
+  openGraph: {
+    type: "website",
+    url: "/pilot",
+    title,
+    description,
+  },
+  twitter: { title, description },
 };
 
 const sections: ReadonlyArray<{ heading: string; body: string }> = [
@@ -216,6 +233,14 @@ export default function PilotPage() {
       </section>
 
       <Footer />
+      <ServiceJsonLd />
+      <OfferPilotJsonLd />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Pilot Program", path: "/pilot" },
+        ]}
+      />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { editorialColors } from "@/components/Brand";
 import { Masthead } from "@/components/sections/Masthead";
 import { Hero } from "@/components/sections/Hero";
@@ -8,6 +9,22 @@ import { ProductMock } from "@/components/sections/ProductMock";
 import { AudienceProof } from "@/components/sections/AudienceProof";
 import { Pilot } from "@/components/sections/Pilot";
 import { Footer } from "@/components/sections/Footer";
+import { ServiceJsonLd } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${siteConfig.name} — ${siteConfig.tagline}`,
+  },
+  description: siteConfig.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+  },
+};
 
 export default function Page() {
   return (
@@ -21,6 +38,7 @@ export default function Page() {
       <AudienceProof />
       <Pilot />
       <Footer />
+      <ServiceJsonLd />
     </main>
   );
 }
