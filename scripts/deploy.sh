@@ -15,8 +15,11 @@ PM2_APP="${PM2_APP:-adaptyx-web}"
 echo "==> git pull"
 git pull --ff-only origin main
 
-echo "==> npm install"
-npm install --no-audit --no-fund
+echo "==> clean stale build artifacts"
+rm -rf .next .tsbuildinfo
+
+echo "==> npm ci (clean, lockfile-faithful install)"
+npm ci --no-audit --no-fund
 
 echo "==> next build"
 ./node_modules/.bin/next build
