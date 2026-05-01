@@ -42,9 +42,9 @@ export const Depth = () => {
                 textWrap: "balance",
               }}
             >
-              Twelve domains.{" "}
+              Six pillars.{" "}
               <span style={{ color: editorialColors.gold, fontStyle: "italic" }}>
-                One operating layer.
+                One platform.
               </span>
             </h2>
           </div>
@@ -60,11 +60,11 @@ export const Depth = () => {
             }}
           >
             Most "AI for senior care" pitches are one thin feature in search of
-            a buyer. CareCore is the opposite — a full operating layer with{" "}
+            a buyer. CareCore is the opposite — a fully integrated platform with{" "}
             <strong style={{ color: editorialColors.navy }}>
-              {total}+ shipped features
+              {total}+ shipped capabilities
             </strong>{" "}
-            across the surface of skilled-nursing operations.
+            spanning clinical care, billing, compliance, and interoperability.
           </p>
         </div>
 

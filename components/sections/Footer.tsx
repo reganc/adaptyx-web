@@ -8,10 +8,10 @@ const columns: ReadonlyArray<Col> = [
     "Platform",
     [
       { label: "Overview", href: "/platform" },
-      { label: "Clinical Care", href: "/platform/clinical-care" },
-      { label: "Quality & QAPI", href: "/platform/quality-qapi" },
-      { label: "Compliance & Rights", href: "/platform/compliance" },
-      { label: "Reporting & AI", href: "/platform/reporting-ai" },
+      { label: "Clinical & Operational", href: "/platform/clinical-operational" },
+      { label: "Revenue Cycle", href: "/platform/revenue-cycle" },
+      { label: "Interoperability", href: "/platform/interoperability" },
+      { label: "Workforce, Compliance & Quality", href: "/platform/workforce-compliance-quality" },
     ],
   ],
   [
@@ -19,8 +19,8 @@ const columns: ReadonlyArray<Col> = [
     [
       { label: "Pilot Program", href: "/pilot" },
       { label: "Request a Pilot", href: "/pilot/request" },
-      { label: "Workforce", href: "/platform/workforce" },
-      { label: "Family & Communication", href: "/platform/family-communication" },
+      { label: "Connected Experience", href: "/platform/connected-experience" },
+      { label: "Intelligent Care", href: "/platform/intelligent-care" },
     ],
   ],
   [
@@ -71,8 +71,8 @@ export const Footer = () => (
               maxWidth: 320,
             }}
           >
-            The operating layer for skilled nursing. Built by Adaptyx in partnership with operators
-            who refuse to lose another nurse to paperwork.
+            A modern operating system for skilled nursing. Built by Adaptyx for operators who refuse
+            to lose another nurse to paperwork.
           </p>
         </div>
         {columns.map(([title, links]) => (

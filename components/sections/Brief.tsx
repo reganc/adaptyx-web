@@ -3,21 +3,21 @@ import { Eyebrow, editorialColors } from "../Brand";
 const briefs = [
   {
     label: "01 · The Pattern",
-    headline: "Software didn't fix the problem. It is the problem.",
+    headline: "Fragmented software is the problem. Not the cure.",
     body:
-      "EHRs were built to record what happened, not to prevent what shouldn't. Every shift, the same gaps reappear: late charting, missed reassessments, MDS items that drift past their window. Staff aren't lazy — they're outnumbered by their own task list.",
+      "Most facilities run a different vendor for charting, billing, scheduling, and family messaging. Data doesn't reconcile. Compliance signals get lost in the seams. Staff carry the integration in their heads, shift after shift.",
   },
   {
     label: "02 · The Cost",
     headline: "Compliance failures rarely arrive as surprises.",
     body:
-      "By the time a survey turns up a deficiency, it has been visible in the workflow for weeks. The signal was there. The system just didn't watch for it. CareCore watches — continuously, quietly, and without adding work.",
+      "By the time a survey turns up a deficiency, it has been visible in the workflow for weeks. The signal was there. The system just didn't connect it. CareCore connects it — across clinical, financial, and operational data, in real time.",
   },
   {
-    label: "03 · The Layer",
-    headline: "Not another EHR. The system that makes yours work.",
+    label: "03 · The Platform",
+    headline: "One platform. One source of truth. One floor.",
     body:
-      "CareCore observes the patterns inside your existing platform, learns how each user works, and intervenes the moment a task is at risk of being missed. Your nurses keep their workflow. The platform keeps their pace.",
+      "CareCore replaces the patchwork with a unified, real-time platform — clinical, billing, staffing, compliance, and interoperability under one roof. Built cloud-native from the ground up, designed for the way modern post-acute care actually works.",
   },
 ];
 
@@ -49,10 +49,10 @@ export const Brief = () => (
               margin: 0,
             }}
           >
-            What's actually breaking on the floor.
+            Why post-acute needs a real platform.
           </h2>
         </div>
-        <Eyebrow color={editorialColors.stone}>April 2026 · Operational Intelligence</Eyebrow>
+        <Eyebrow color={editorialColors.stone}>April 2026 · Post-Acute Operating System</Eyebrow>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>

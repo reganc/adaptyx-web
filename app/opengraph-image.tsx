@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "CareCore by Adaptyx — The operating layer for skilled nursing";
+export const alt = "CareCore by Adaptyx — A modern operating system for skilled nursing";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -46,7 +46,7 @@ export default function OGImage() {
               maxWidth: 1040,
             }}
           >
-            <span style={{ marginRight: 24 }}>The AI operating layer for</span>
+            <span style={{ marginRight: 24 }}>A modern operating system for</span>
             <span style={{ color: "#C8922A", fontStyle: "italic" }}>
               skilled nursing.
             </span>
@@ -70,7 +70,7 @@ export default function OGImage() {
               lineHeight: 1.35,
             }}
           >
-            Documentation, tasks, and compliance — kept on track shift after shift.
+            Clinical, billing, compliance, staffing, and interoperability — one cloud-native platform.
           </div>
           <div
             style={{

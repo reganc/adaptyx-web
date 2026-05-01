@@ -4,8 +4,8 @@ export const siteConfig = {
   legalName: "Adaptyx",
   url: "https://www.adaptyxai.com",
   description:
-    "CareCore is the AI operating layer for skilled nursing facilities. It sits alongside your existing systems and quietly keeps documentation, tasks, and compliance from slipping — shift after shift.",
-  tagline: "The operating layer for skilled nursing.",
+    "CareCore is a modern operating system for skilled nursing facilities — a fully integrated, cloud-native platform that unifies clinical care, billing, compliance, staffing, and interoperability into one real-time system.",
+  tagline: "A modern operating system for skilled nursing.",
   twitter: "@adaptyxai",
   email: "regan@chorlog.com",
   ogImage: "/opengraph-image",

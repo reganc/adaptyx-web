@@ -55,7 +55,7 @@ export const ServiceJsonLd = () => (
         name: siteConfig.legalName,
         url: siteConfig.url,
       },
-      serviceType: "AI operating layer for skilled nursing facilities",
+      serviceType: "Cloud-native EHR and operating system for skilled nursing facilities",
       areaServed: { "@type": "Country", name: "United States" },
       audience: {
         "@type": "BusinessAudience",

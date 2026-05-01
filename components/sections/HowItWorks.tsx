@@ -6,21 +6,21 @@ const steps = [
     title: "Observe",
     kicker: "Pattern recognition, per user.",
     body:
-      "CareCore reads the cadence of each nurse, CNA, and admin — when they chart, where they slow, what they miss most. No new logins, no separate workflow. Just attention.",
+      "Because the chart, the schedule, the eMAR, and the billing engine live in one platform, CareCore sees the cadence of each nurse, CNA, and admin — when they chart, where they slow, what they miss most.",
   },
   {
     n: "II.",
     title: "Anticipate",
     kicker: "Catch drift before it becomes deficiency.",
     body:
-      "An MDS window closing in 3 hours. A wound reassessment overdue by 22 minutes. A handoff note left blank. CareCore sees these forming and knows whose hands they need to land in.",
+      "An MDS window closing in 3 hours. A wound reassessment overdue by 22 minutes. A handoff note left blank. The platform sees these forming and knows whose hands they need to land in.",
   },
   {
     n: "III.",
     title: "Intervene",
     kicker: "A nudge in the right place. That's all.",
     body:
-      "The right person, the right channel, the right moment — by SMS, by their phone, by a quiet prompt inside their existing tool. Nothing escalates if nothing slipped. Most days, nobody notices the system worked.",
+      "The right person, the right channel, the right moment — by SMS, by their phone, by a quiet prompt inside the chart they're already in. Nothing escalates if nothing slipped. Most days, nobody notices the system worked.",
   },
 ];
 
@@ -36,7 +36,7 @@ export const HowItWorks = () => (
     <div style={{ maxWidth: 1376, margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: 64 }}>
         <Eyebrow color={editorialColors.gold} style={{ marginBottom: 14 }}>
-          The Loop · How CareCore Works
+          Intelligent Care · The Loop Inside CareCore
         </Eyebrow>
         <h2
           style={{

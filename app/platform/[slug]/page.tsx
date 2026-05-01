@@ -90,7 +90,7 @@ export default async function DomainPage({
             </Link>
             <span style={{ margin: "0 12px", opacity: 0.5 }}>·</span>
             <span style={{ color: editorialColors.gold }}>
-              Domain {String(index + 1).padStart(2, "0")} of{" "}
+              Pillar {String(index + 1).padStart(2, "0")} of{" "}
               {String(platformDomains.length).padStart(2, "0")}
             </span>
           </div>
@@ -308,7 +308,7 @@ export default async function DomainPage({
           {prev ? (
             <DomainNavLink
               direction="prev"
-              label="Previous Domain"
+              label="Previous Pillar"
               name={prev.name}
               href={`/platform/${prev.slug}`}
             />
@@ -318,7 +318,7 @@ export default async function DomainPage({
           {next ? (
             <DomainNavLink
               direction="next"
-              label="Next Domain"
+              label="Next Pillar"
               name={next.name}
               href={`/platform/${next.slug}`}
             />
@@ -435,7 +435,7 @@ export default async function DomainPage({
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <Eyebrow color={editorialColors.navy} style={{ marginBottom: 24 }}>
-            Other Domains
+            Other Pillars
           </Eyebrow>
           <div
             style={{
@@ -510,7 +510,7 @@ export default async function DomainPage({
                 paddingBottom: 4,
               }}
             >
-              See all 12 domains →
+              See all {platformDomains.length} pillars →
             </Link>
           </div>
         </div>

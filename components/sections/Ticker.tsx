@@ -1,11 +1,12 @@
 import { editorialColors } from "../Brand";
 
 const items = [
-  "Late documentation flagged in real time",
-  "AI-guided shift handoffs",
-  "Continuous survey readiness",
-  "Layered on top of your existing EHR",
-  "RBAC + HIPAA-aligned audit trail",
+  "Cloud-native, all-in-one platform",
+  "MDS 3.0 + PDPM optimization",
+  "Native HL7 v2 + FHIR R4 + SMART on FHIR",
+  "Integrated 837I billing + ERA processing",
+  "AI-powered clinical assistant with voice queries",
+  "PBJ + QAPI + Five-Star simulator built in",
   "30-day pilot · no cost · clear success metrics",
 ];
 

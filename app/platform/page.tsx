@@ -12,7 +12,7 @@ import {
 
 const title = "Platform";
 const description =
-  "The full surface of CareCore — twelve capability domains spanning clinical care, pharmacy, quality, compliance, workforce, family, operations, AI, and the platform underneath.";
+  "The full surface of CareCore — six pillars spanning the clinical and operational platform, revenue cycle, interoperability, connected experience, workforce/compliance/quality, and intelligent data-driven care.";
 
 export const metadata: Metadata = {
   title,
@@ -55,9 +55,9 @@ export default function PlatformPage() {
               textWrap: "balance",
             }}
           >
-            Twelve capability domains.{" "}
+            Six pillars.{" "}
             <span style={{ color: editorialColors.gold, fontStyle: "italic" }}>
-              One operating layer.
+              One platform.
             </span>
           </h1>
           <p
@@ -70,9 +70,11 @@ export default function PlatformPage() {
               maxWidth: 760,
             }}
           >
-            CareCore covers the surface of skilled-nursing operations end to
-            end. Below is the full topology — pick a domain to drill in, or
-            scan the highlights to feel the depth.
+            CareCore is a fully integrated, cloud-native platform that powers
+            every aspect of skilled nursing — clinical care, billing,
+            compliance, staffing, and interoperability. Below is the full
+            topology — pick a pillar to drill in, or scan the highlights to
+            feel the depth.
           </p>
 
           <div
@@ -84,11 +86,11 @@ export default function PlatformPage() {
               borderTop: "1px solid rgba(255,255,255,0.14)",
             }}
           >
-            <Stat label="Capability Domains" value={String(platformDomains.length)} />
-            <Stat label="Features Shipped" value={String(total)} />
+            <Stat label="Platform Pillars" value={String(platformDomains.length)} />
+            <Stat label="Capabilities Shipped" value={String(total)} />
             <Stat
-              label="Survey-Impact Wins"
-              value="MDS · Wound · Pain"
+              label="Standards"
+              value="HL7 · FHIR R4"
               small
             />
           </div>

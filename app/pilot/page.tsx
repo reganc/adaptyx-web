@@ -38,7 +38,7 @@ const sections: ReadonlyArray<{ heading: string; body: string }> = [
   },
   {
     heading: "What we ask of you",
-    body: "One unit (roughly 30 beds, 5–15 staff). A single operational sponsor we can reach during business hours. Read access to your existing EHR/charting system. That's it — no IT integration project, no procurement cycle.",
+    body: "One unit (roughly 30 beds, 5–15 staff). A single operational sponsor we can reach during business hours. A baseline snapshot of the unit's last 30 days of documentation timing so we can measure change. That's it — no IT integration project, no procurement cycle.",
   },
   {
     heading: "What we provide",

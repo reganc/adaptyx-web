@@ -3,11 +3,11 @@ import { Eyebrow, RuleHeading, editorialColors } from "../Brand";
 const cards = [
   {
     label: "For the Administrator",
-    headline: "An ROI argument that's already been made for you.",
+    headline: "One platform. One contract. One number to look at.",
     points: [
-      "Recover platform cost in 60–90 days through documentation time alone.",
+      "Replace four to six fragmented vendors with a single integrated system.",
       "Continuous survey readiness instead of pre-survey scrambles.",
-      "One operating layer across multiple facilities, no migration.",
+      "Same workflows, same data model, same uptime — across every facility.",
     ],
     quote:
       "We saw the same deficiencies in three surveys in a row. CareCore would have caught all of them, weeks earlier.",
@@ -17,8 +17,8 @@ const cards = [
     label: "For the Director of Nursing",
     headline: "Your staff stops carrying the system in their heads.",
     points: [
-      "Hours per shift returned to direct resident care.",
-      "Handoffs that arrive complete, not 'I'll finish it after lunch.'",
+      "Mobile-first eMAR, eTAR, and notes — with offline capability.",
+      "Handoffs that arrive complete, auto-generated from the day's clinical events.",
       "Burnout indicators surfaced before they become resignations.",
     ],
     quote:
@@ -27,14 +27,14 @@ const cards = [
   },
   {
     label: "For IT & Operations",
-    headline: "Layered, not invasive. RBAC the way you'd build it.",
+    headline: "Cloud-native by design. Open by standard.",
     points: [
-      "Sits alongside your EHR. No data migration, no rip-and-replace.",
-      "Role-based access control, end-to-end audit trail, HIPAA-aligned.",
-      "Read-only API integration where possible. Reversible at any time.",
+      "Native HL7 v2, FHIR R4, and SMART on FHIR — open by design.",
+      "SAML/SSO, SCIM, MFA, IP allowlist, full PHI access audit. SOC 2 Type II + HIPAA-aligned.",
+      "No on-prem servers, no per-facility installs, multi-region failover built in.",
     ],
     quote:
-      "It's the first vendor in five years that didn't ask me to open something I didn't want to open.",
+      "First vendor in five years that didn't ask me to maintain another VPN.",
     author: "IT Director · multi-facility operator",
   },
 ];

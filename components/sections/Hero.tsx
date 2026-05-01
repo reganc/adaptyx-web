@@ -35,7 +35,7 @@ export const Hero = () => (
         }}
       >
         <Eyebrow color="rgba(255,255,255,0.55)">
-          Volume I · Operational Intelligence for Skilled Nursing
+          Volume I · A Modern Operating System for Skilled Nursing
         </Eyebrow>
         <Eyebrow color={editorialColors.gold}>Now Accepting Pilots — Spring 2026</Eyebrow>
       </div>
@@ -50,7 +50,7 @@ export const Hero = () => (
       >
         <div>
           <Eyebrow color={editorialColors.gold} style={{ marginBottom: 24 }}>
-            The Operating Layer · Issue 01
+            CareCore · The Platform · Issue 01
           </Eyebrow>
           <h1
             style={{
@@ -64,9 +64,9 @@ export const Hero = () => (
               textWrap: "balance",
             }}
           >
-            Prevent staff from{" "}
+            A modern operating system for{" "}
             <span style={{ color: editorialColors.gold, fontStyle: "italic", fontWeight: 700 }}>
-              falling behind.
+              skilled nursing.
             </span>
           </h1>
           <p
@@ -80,9 +80,9 @@ export const Hero = () => (
               maxWidth: 640,
             }}
           >
-            CareCore is the AI operating layer for skilled nursing facilities. It sits alongside your
-            existing systems and quietly keeps documentation, tasks, and compliance from slipping —
-            shift after shift.
+            CareCore is a fully integrated, cloud-native platform that powers every aspect of
+            skilled nursing — clinical care, compliance, billing, staffing, and interoperability —
+            replacing fragmented legacy systems with one real-time platform.
           </p>
 
           <div style={{ display: "flex", gap: 14, marginTop: 36 }}>
@@ -129,26 +129,26 @@ export const Hero = () => (
 
         <aside style={{ borderLeft: `1px solid ${editorialColors.gold}`, paddingLeft: 28 }}>
           <Eyebrow color={editorialColors.gold} style={{ marginBottom: 18 }}>
-            The Margin Problem
+            One Platform · Six Pillars
           </Eyebrow>
           {[
             {
-              big: "1 in 4",
+              big: "6",
               color: "#fff",
               body:
-                "Documentation tasks completed late or missed entirely on a typical shift.",
+                "Pillars — clinical, revenue cycle, interoperability, connected experience, workforce/compliance/quality, and intelligent care.",
             },
             {
-              big: "$840k",
+              big: "150+",
               color: "#fff",
               body:
-                "Average annual cost of agency staffing per 100-bed facility — much of it driven by burnout from administrative load.",
+                "Shipped capabilities under one cloud-native chart, billing engine, and analytics layer.",
             },
             {
               big: "30 days",
               color: editorialColors.gold,
               body:
-                "To prove measurable impact in one unit. No cost. No rip-and-replace.",
+                "To prove measurable impact in one unit. No cost. No long-term commitment.",
             },
           ].map((stat, i) => (
             <div key={stat.big} style={{ marginBottom: i < 2 ? 28 : 0 }}>
