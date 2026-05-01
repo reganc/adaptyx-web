@@ -22,7 +22,10 @@ echo "==> npm ci (clean, lockfile-faithful install)"
 npm ci --no-audit --no-fund
 
 echo "==> next build"
-./node_modules/.bin/next build
+# Invoke via the package's bin path directly. node_modules/.bin/next is
+# sometimes missing after `npm ci` when running as root (npm bin-link
+# flake), so we don't rely on it.
+node ./node_modules/next/dist/bin/next build
 
 echo "==> pm2 restart $PM2_APP"
 pm2 restart "$PM2_APP" --update-env
