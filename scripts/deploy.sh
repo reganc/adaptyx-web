@@ -25,7 +25,15 @@ echo "==> next build"
 # Invoke via the package's bin path directly. node_modules/.bin/next is
 # sometimes missing after `npm ci` when running as root (npm bin-link
 # flake), so we don't rely on it.
-node ./node_modules/next/dist/bin/next build
+#
+# Next.js 15.x occasionally hits an ENOENT race during the static export
+# rename phase ('.next/export/500.html' -> '.next/server/pages/500.html').
+# It's reliably fixed by a clean retry, so do that automatically.
+if ! node ./node_modules/next/dist/bin/next build; then
+  echo "==> first build failed, cleaning .next and retrying once"
+  rm -rf .next
+  node ./node_modules/next/dist/bin/next build
+fi
 
 echo "==> pm2 restart $PM2_APP"
 pm2 restart "$PM2_APP" --update-env
