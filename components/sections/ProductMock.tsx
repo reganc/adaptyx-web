@@ -66,9 +66,9 @@ export const ProductMock = () => (
       >
         <Image
           src="/images/carecore-console.png"
-          alt="CareCore console — Modules, bed census, active alerts, and quick-link tiles for a 80-bed skilled nursing facility"
-          width={3848}
-          height={1082}
+          alt="CareCore console — Modules, bed census, active alerts, and quick-link tiles for an 80-bed skilled nursing facility"
+          width={1942}
+          height={935}
           priority
           sizes="(min-width: 1408px) 1376px, calc(100vw - 64px)"
           style={{ width: "100%", height: "auto", display: "block" }}
