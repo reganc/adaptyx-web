@@ -1,7 +1,38 @@
 import type { Metadata, Viewport } from "next";
+import {
+  Barlow_Condensed,
+  Barlow_Semi_Condensed,
+  Source_Serif_4,
+  JetBrains_Mono,
+} from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import "./globals.css";
+
+const fontDisplay = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  display: "swap",
+});
+const fontUi = Barlow_Semi_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ui",
+  display: "swap",
+});
+const fontBody = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+const fontMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -69,7 +100,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${fontDisplay.variable} ${fontUi.variable} ${fontBody.variable} ${fontMono.variable}`}
+    >
       <body>
         <link
           rel="alternate"
